@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineGuide - Tvoja Filmska Baza</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+    <script src="js/tptpskripte.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/CineLogoFinal.png" alt="CineGuide Logo" class="logo-slika">
+        </div>
+        <nav aria-label="Glavna navigacija">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="sadrzaj.html">Sadržaj</a></li>
+                <li><a href="https://github.com/amirkesetovic/Grupa14-TPTP-2026">GitHub</a></li>
+                <li><a href="#" id="accessibility">Pristupačnost</a></li>
+            </ul>
+        </nav>
+
+
+<div class="accessibility-panel hidden" id="accessibility-panel">
+
+    <h3>Postavke pristupačnosti</h3>
+
+    <div class="accessibility-option">
+        <label for="font-size-slider">
+            Veličina fonta
+        </label>
+
+        <input
+            type="range"
+            id="font-size-slider"
+            min="14"
+            max="24"
+            value="16"
+        >
+
+        <span id="font-size-value">16px</span>
+    </div>
+
+    <div class="accessibility-option">
+        <button id="toggle-animations">
+            Isključi animacije
+        </button>
+    </div>
+
+</div>
+    </header>
+    <div class="glavni-kontejner">
+        
+<aside class="lijevi-sidebar">
+    <input type="checkbox" id="mode-toggle" class="mode-checkbox">
+
+    <label for="mode-toggle" class="slide-kontejner">
+    <div class="ikona-omotac">
+        <img src="images/lightmode.png" alt="Light" class="ikona-sunce">
+        <img src="images/darkmode.png" alt="Dark" class="ikona-mesec">
+    </div>
+    </label>
+
+    <h3>Kategorije</h3>
+    <ul>
+        <li><a href="#" data-filter="sve">Sve</a></li>
+        <li><a href="#" data-filter="akcija">Akcija</a></li>
+        <li><a href="#" data-filter="komedija">Komedija</a></li>
+        <li><a href="#" data-filter="drama">Drama</a></li>
+        <li><a href="#" data-filter="horor">Horor</a></li>
+        <li><a href="#" data-filter="sci-fi">Sci-Fi</a></li>
+        <li><a href="#" data-filter="romanticni">Romantični</a></li>
+        <li><a href="#" data-filter="triler">Triler</a></li>
+    </ul>
+</aside>
+
+        <main class="sredisnji-sadrzaj">
+
+    <!-- HERO SLIDER -->
+    <section class="hero-slider">
+
+        <button class="nav-btn prev">&#10094;</button>
+        <button class="nav-btn next">&#10095;</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/TG_poster.jpeg" alt="Top Gun">
+
+                <div class="slide-content">
+                    <h1>Top Gun + Top Gun Maverick</h1>
+                    <p>
+                        Akcioni klasik i njegov savremeni nastavak koji su osvojili publiku.
+                    </p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <video autoplay muted loop playsinline class="slide-video">
+                    <source src="images/TMAG_trailer.mp4" type="video/mp4">
+                </video>
+
+                <div class="slide-content">
+                    <h1>Mandalorian i Grogu</h1>
+                    <p>
+                        Omiljeni likovi iz Star Wars univerzuma i njihova avantura kroz galaksiju.
+                    </p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/Opsesija_poster.jpg" alt="Opsesija">
+
+                <div class="slide-content">
+                    <h1>Opsesija</h1>
+                    <p>
+                        Film o opsesivnoj ljubavi i njenim tragičnim posljedicama.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dots"></div>
+
+    </section>
+
+    <section class="sadrzaj-filmova">
+
+            <article class="film-kartica" data-kategorija="akcija sve">
+                <picture><img src="images/TG_poster.jpeg" alt="Top Gun">  </picture>
+                <div class="info">
+                    <h3>Top Gun + Top Gun Maverick</h3>
+                    <p>Akcioni klasik i njegov savremeni nastavak koji su osvojili publiku.</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★☆</span> <span class="ocjena-broj">4.8/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Vrhunski specijalni efekti.</p>
+                    <a href="#" class="detalji-btn" data-film="topgun">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="komedija sve">
+                <img src="images/Devil_poster.jpg" alt="The Devil Wears Prada 2">
+                <div class="info">
+                    <h3>The Devil Wears Prada 2</h3>
+                    <p>Film koji prikazuje život u modnoj industriji.</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★☆☆</span> <span class="ocjena-broj">3.2/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Citirat ćemo ovo godinama.</p>
+                    <a href="#" class="detalji-btn" data-film="devil">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="drama sve">
+                <img src="images/michael.jpg" alt="Michael film">
+                <div class="info">
+                    <h3>Michael</h3>
+                    <p>Biografski film koji prati život i nasljeđe "kralja popa", Michaela Jacksona</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★★</span> <span class="ocjena-broj">5.0/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Nadmašio je sva očekivanja.</p>
+                    <a href="#" class="detalji-btn" data-film="michael">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="horor sve">
+                <img src="images/Hokum_poster.jpg" alt="Hokum">
+                <div class="info">
+                    <h3>Hokum</h3>
+                    <p>Psihološki horor film</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★☆</span> <span class="ocjena-broj">4.0/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Između psihološke napetosti i klasičnog straha.</p>
+                    <a href="#" class="detalji-btn" data-film="hokum">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="sci-fi sve">
+                <img src="images/TMAG_poster.jpeg" alt="Mandalorian i Grogu">
+                <div class="info">
+                    <h3>Mandalorian i Grogu</h3>
+                    <p>Novi film poznate franšize Star Wars </p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★★</span> <span class="ocjena-broj">4.7/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Vrhunski vizualni efekti i priča.</p>
+                    <a href="#" class="detalji-btn" data-film="mandalorian">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="romanticni sve">
+                <img src="images/dramaposter.jpg" alt="Film Drama">
+                <div class="info">
+                    <h3>The Drama</h3>
+                    <p>The Drama je mračna romantična komedija</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★★</span> <span class="ocjena-broj">4.9/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Film ostavlja snažan utisak emotivnom pričom i uvjerljivom glumom.</p>
+                    <a href="#" class="detalji-btn" data-film="drama">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="triler sve">
+                <img src="images/ITG_poster.jpg" alt="In The Grey">
+                <div class="info">
+                    <h3>In The Grey</h3>
+                    <p>Napet triler pun obrta.</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★☆</span> <span class="ocjena-broj">4.2/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Drži pažnju do kraja.</p>
+                    <a href="#" class="detalji-btn" data-film="grey">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="horor sve">
+                <img src="images/Opsesija_poster.jpg" alt="Opsesija">
+                <div class="info">
+                    <h3>Opsesija</h3>
+                    <p>Psihološki horor film</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★☆</span> <span class="ocjena-broj">4.0/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Horor koji ostavlja snažan utisak.</p>
+                    <a href="#" class="detalji-btn" data-film="obesija">Detalji</a>
+                </div>
+            </article>
+
+            <article class="film-kartica" data-kategorija="sci-fi sve">
+                <img src="images/digitalcircus.jpeg" alt="The Amazing Digital Circus">
+                <div class="info">
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>Animirani film o nevjerovatnom circusu.</p>
+                    <p class="rating"><strong>Ocjena:</strong> <span class="stars">★★★★★</span> <span class="ocjena-broj">4.8/5</span></p>
+                    <p class="misljenje"><strong>Naše mišljenje:</strong> Prekrasna animacija i priča.</p>
+                    <a href="#" class="detalji-btn" data-film="tadc">Detalji</a>
+                </div>
+            </article>
+        </section>
+
+            <section id="recenzije" class="hidden">
+
+                <article class="film-recenzija hidden" data-recenzija="topgun">
+
+                    <button class="nazad-btn detalji-btn">
+                        ← Nazad
+                    </button>
+
+                    <img src="images/TG_review.png" alt="Top Gun" class="recenzija-slika">
+
+                    <h1>Top Gun Maverick</h1>
+
+                    <p>
+                        Originalni Top Gun iz 1986. danas djeluje kao savršena kapsula američke pop-kulture osamdesetih - 
+                        pun adrenalina, patriotizma, motora, aviona i ogromne količine samopouzdanja. Priča je relativno 
+                        jednostavna, ali film funkcioniše zahvaljujući karizmi Tom Cruise, odličnom soundtracku i ikonografiji 
+                        koja je ostala prepoznatljiva skoro četiri decenije. Neke scene danas djeluju zastarjelo ili pretjerano 
+                        “macho”, ali upravo to filmu daje šarm.
+                    </p>
+
+                    <p>
+                        Maverick radi ono što rijetko kojem legacy nastavku uspije — poštuje original, a istovremeno ga nadograđuje. 
+                        Film ima mnogo više emocija, ozbiljnije teme i vjerovatno najbolje praktične scene letenja ikad snimljene u 
+                        blockbuster filmu. Fokus na mentorstvu, starenju i suočavanju sa prošlošću daje dubinu koju prvi film nije imao. 
+                        Vizuelno i tehnički, Maverick je spektakl, ali nikad ne zaboravlja likove. Mnogi ga smatraju boljim od originala 
+                        upravo zato što uspijeva spojiti nostalgiju i moderan tempo bez osjećaja da je “fan service”.
+                    </p>
+
+                    <h1>Ocjena: 4.8/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="devil">
+
+                    <button class="nazad-btn detalji-btn">
+                        ← Nazad
+                    </button>
+
+                    <img src="images/Devil_review.png" alt="The Devil wears Prada 2" class="recenzija-slika">
+
+                    <h1>The Devil Wears Prada 2</h1>
+
+                    <p>
+                        Nastavak kultnog filma iz 2006. uspio je izbjeći najveću zamku modernih nastavaka - da bude samo nostalgija bez ideje. 
+                        Film vraća Mirandu Priestly, Andy Sachs i Emily Charlton u potpuno drugačiji svijet medija, gdje print magazini gube moć, 
+                        a digitalni sadržaj i AI dominiraju industrijom.
+                    </p>
+
+                    <p>
+                        Najveća snaga filma je i dalje Meryl Streep, koja Mirandu igra s nevjerovatnom lakoćom. Anne Hathaway i Emily Blunt 
+                        imaju mnogo bolju dinamiku nego u prvom filmu, a priča djeluje zrelije i manje fokusirana na “makeover fantasy”. Međutim, 
+                        film povremeno pokušava obraditi previše tema odjednom - AI, medijsku krizu, korporacije i društvene mreže - pa neki 
+                        sporedni likovi ostanu nerazrađeni.
+                    </p>
+
+                    <p>
+                        Ipak, za fanove originala ovo je veoma uspješan povratak svijetu Runwaya: elegantan, zabavan i pametniji nego što se očekivalo.
+                    </p>
+
+                    <h1>Ocjena: 3.2/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="michael">
+
+                        <button class="nazad-btn detalji-btn">
+                            ← Nazad
+                        </button>
+
+                        <img src="images/Michael_review.webp" alt="Michael" class="recenzija-slika">
+
+                        <h1>Michael</h1>
+
+                        <p>
+                            Michael je jedan od najrizičnijih biografskih filmova posljednjih godina jer pokušava prikazati život vjerovatno najveće pop 
+                            zvijezde ikada - Michael Jackson. Već iz trailera i dostupnih informacija vidi se da film cilja na grandiozan pristup, sa 
+                            velikim muzičkim scenama i fokusom na Jacksonovu transformaciju od dječije zvijezde do globalnog fenomena.
+                        </p>
+
+                        <p>
+                            Najveći plus zasad djeluje izbor Jaafar Jackson za glavnu ulogu - fizički i pokretima nevjerovatno podsjeća na Michaela. 
+                            Međutim, ostaje pitanje koliko će film biti objektivan prema kontroverzama koje su obilježile Jacksonov život. Ako previše 
+                            idealizira glavnog lika, mogao bi izgubiti emocionalnu težinu. Ako pronađe balans između genijalnosti i tragedije, mogao bi 
+                            postati jedan od najboljih muzičkih biopica posljednje decenije.
+                        </p>
+
+                        <h1>Ocjena: 5.0/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="hokum">
+
+                        <button class="nazad-btn detalji-btn">
+                            ← Nazad
+                        </button>
+
+                        <img src="images/Hokum_review.webp" alt="Hokum" class="recenzija-slika">
+
+                        <h1>Hokum</h1>
+
+                        <p>
+                            Hokum je tip horora koji podsjeća zašto “klasične” ghost story priče još uvijek mogu biti zastrašujuće kada ih režira 
+                            neko ko razumije atmosferu i psihološku napetost. Film prati pisca Ohma Baumana koji dolazi u izolovani hotel kako bi 
+                            prosuo pepeo svojih roditelja, ali se vrlo brzo uplete u priče o vještici, nestancima i neobjašnjivim pojavama koje ga 
+                            tjeraju da se suoči sa vlastitim traumama.
+                        </p>
+
+                         <p>
+                             Hokum je film koji balansira između klasičnog horora i psihološke drame. Iako ima elemente nadnaravnog, najveći strah 
+                             dolazi iz unutrašnjih demona glavnog lika i njegove nesposobnosti da se nosi sa prošlošću. Film ne koristi jeftine 
+                             trikove da bi uplašio publiku, već gradi napetost kroz atmosferu i karakterizaciju.
+                        </p>
+
+                        <p>
+                            Najveća snaga filma je način na koji Damian McCarthy gradi strah. Hokum nema potrebu da publiku bombarduje gore scenama 
+                            ili konstantnim jumpscareovima. Umjesto toga, film koristi tišinu, neizvjesnost i osjećaj da nešto “nije u redu”. 
+                            Atmosfera je gotovo hipnotična — tmurni hodnici hotela, irski folklor i sanjarska fotografija stvaraju osjećaj da gledalac 
+                            zajedno s glavnim likom polako gubi kontakt sa stvarnošću.
+                        </p>
+
+                        <p>
+                            Adam Scott donosi vjerovatno jednu od svojih najboljih ozbiljnih uloga do sada. Njegov Ohm je istovremeno odbojan, slomljen 
+                            i veoma ljudski lik, a film uspijeva balansirati između paranormalnog horora i emocionalne priče o traumi i krivici. Posebno 
+                            dobro funkcioniše način na koji McCarthy koristi folklor — vještice, duhovi i jeziva bića nisu tu samo radi estetike, nego 
+                            djeluju kao produžetak psihološkog stanja glavnog lika.
+                        </p>
+                            
+
+                        <h1>Ocjena: 4.0/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="mandalorian">
+
+                        <button class="nazad-btn detalji-btn">
+                            ← Nazad
+                        </button>
+
+                        <img src="images/TMAG_review.webp" alt="The Mandalorian" class="recenzija-slika">
+
+                        <h1>Mandalorian i Grogu</h1>
+
+                        <p>
+                            Ovaj film ima težak zadatak: prenijeti atmosferu serije The Mandalorian na veliko platno bez gubitka intimnog odnosa 
+                            između Dina Djarina i Grogua. Upravo je ta “otac i dijete” dinamika bila srce serije, dok su akcija i Star Wars nostalgija 
+                            bili dodatak.
+                        </p>
+
+                        <p>
+                            Očekivanja su ogromna jer je The Mandalorian praktično spasio reputaciju modernog Star Warsa nakon podijeljenih reakcija na 
+                            sequel trilogiju. Ako film ostane fokusiran na likove i praktični western stil serije, mogao bi biti odličan bioskopski 
+                            Star Wars film. Ako previše ode u CGI spektakl i fan service, postoji rizik da izgubi ono što je seriju činilo posebnom.
+                        </p>
+
+                        <h1>Ocjena: 4.7/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="drama">
+
+                        <button class="nazad-btn detalji-btn">
+                            ← Nazad
+                        </button>
+
+                        <img src="images/Drama_review.webp" alt="Drama" class="recenzija-slika">
+
+                        <h1>Drama</h1>
+
+                        <p>
+                            The Drama na prvi pogled izgleda kao elegantni romantični film o savršenom paru pred vjenčanjem — privlačni protagonisti, 
+                            luksuzni stan u New Yorku i odnos koji djeluje gotovo idealno. Međutim, film vrlo brzo pokazuje da iza te površine krije 
+                            mnogo mračnija i psihološki kompleksnija priča. Umjesto klasičnog romcoma, dobivamo anksioznu i moralno neugodnu dramu koja 
+                            koristi temu school shootinga kao pozadinu za preispitivanje ljubavi, empatije i ljudske prirode.
+                        </p>
+
+                         <p>
+                            Najveća snaga filma je atmosfera stalne nelagode. The Drama ne šokira eksplicitnim scenama nasilja, nego psihološkim pritiskom 
+                            i moralnim dilemama koje postavlja pred gledatelja. Film konstantno tjera publiku da razmišlja o tome koliko zapravo poznajemo 
+                            ljude koje volimo i gdje završava razumijevanje, a počinje neprihvatljivo. Kristoffer Borgli režira film veoma hladno i 
+                            kontrolisano, što dodatno pojačava osjećaj emocionalne tjeskobe.
+                        </p>
+                        
+                        <p>
+                            Zendaya i Robert Pattinson nose gotovo cijeli film i njihova hemija funkcioniše odlično. Posebno je efektan način na koji film 
+                            balansira između emocionalne drame, crnog humora i napetosti, pa se čak i tokom najtežih scena povremeno pojavi trenutak apsurdnog 
+                            smijeha. Upravo ta kombinacija čini da film djeluje vrlo “ljudski”.
+                        </p>
+
+                        <h1>Ocjena: 4.9/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="grey">
+
+                        <button class="nazad-btn detalji-btn">
+                            ← Nazad
+                        </button>
+
+                        <img src="images/ITG_review.webp" alt="In the Grey" class="recenzija-slika">
+
+                        <h1>In the Grey</h1>
+
+                        <p>
+                            Guy Ritchie je posljednjih godina pronašao stabilnu formu sa stylish akcijskim trilerima, a In the Grey izgleda kao 
+                            nastavak tog pristupa. Film vjerovatno neće revolucionirati žanr, ali bi mogao biti veoma zabavan zahvaljujući brzom tempu, 
+                            britkom humoru i karizmatičnoj glumačkoj postavi.
+                        </p>
+
+                         <p>
+                            Ako voliš Ritchiejev stil iz filmova poput The Gentlemen ili Wrath of Man, velike su šanse da će ti i ovo odgovarati. 
+                            Glavni rizik je da film djeluje previše poznato i formulačno, jer Ritchie ponekad reciklira vlastite trikove.
+                        </p>
+
+                        <h1>Ocjena: 4.2/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="obesija">
+
+                        <button class="nazad-btn detalji-btn">
+                            ← Nazad
+                        </button>
+
+                        <img src="images/Obsesija_review.jpg" alt="Obesija" class="recenzija-slika">
+
+                        <h1>Obesija</h1>
+
+                        <p> Obsesija je psihološki horor koji uspijeva spojiti romansu, nelagodu i supernatural elemente na prilično originalan način. 
+                            Priča prati povučenog mladića koji poželi da se njegova simpatija zaljubi u njega — ali kada mu se želja ostvari, situacija 
+                            brzo postaje opsesivna i zastrašujuća.
+
+                        </p>
+
+                        <p>
+                            Film više gradi napetost kroz atmosferu i emocionalnu nelagodu nego kroz klasične jumpscareove. Najjači dio filma je 
+                            transformacija glavnog odnosa iz nečeg romantičnog u gotovo noćnu moru o kontroli i posesivnosti. Režija Curryja Barkera 
+                            djeluje iznenađujuće sigurno za ovakav tip indie horora, a gluma Michaela Johnstona i Inde Navarrette nosi veliki dio filma.
+                        </p>
+
+                        <p> 
+                            Posljednji dio filma pomalo pretjera sa simbolikom i haotičnim momentima, Obsession ostaje veoma efektan moderni psihološki 
+                            horor koji koristi ljubav i opsesiju kao glavni izvor straha.
+                        </p>
+
+                        <h1>Ocjena: 4.0/5</h1>
+
+                </article>
+
+                <article class="film-recenzija hidden" data-recenzija="tadc">
+
+                        <button class="nazad-btn detalji-btn">
+                            ← Nazad
+                        </button>
+
+                        <img src="images/TADC_review.webp" alt="The Amazing Digital Circus" class="recenzija-slika">
+
+                        <h1>The Amazing Digital Circus</h1>
+
+                        <p> 
+                            Amazing Digital Circus je vjerovatno najveći indie animacijski fenomen posljednjih godina - serija koja je na prvi pogled 
+                            djelovala kao haotična, šarena internet-komedija, a vrlo brzo se pretvorila u jednu od emocionalno najtežih i psihološki 
+                            najzanimljivijih animacija moderne internet ere. Ono što je počelo kao “weirdcore” cirkus pun apsurdnog humora i neonskog 
+                            haosa postalo je priča o identitetu, izolaciji i strahu od gubitka vlastitog uma.
+                        </p>
+
+                        <p>
+                            Najveća snaga serije je način na koji kombinuje potpuno suprotne tonove. U jednom trenutku likovi vode apsurdne i gotovo 
+                            dječije razgovore, a već u sljedećem serija postaje egzistencijalni horor. Upravo ta konstantna promjena između humora i 
+                            nelagode čini da Digital Circus djeluje toliko jedinstveno. Iza svih boja, glitch efekata i “internet brainrot” energije 
+                            krije se veoma depresivna priča o ljudima zarobljenim u svijetu iz kojeg možda nikada neće pobjeći.
+                        </p>
+
+                        <p>
+                            Pomni funkcioniše kao savršen glavni lik jer publika zajedno s njom otkriva koliko je taj svijet zapravo nestabilan i 
+                            psihološki opasan. Njena anksioznost i konstantni osjećaj panike daju seriji emocionalnu težinu koja je iznenadila mnoge 
+                            gledatelje. Ostali likovi, posebno Jax, Ragatha i Kaufmo, dodatno pojačavaju osjećaj da svaki stanovnik cirkusa pokušava 
+                            sačuvati razum na svoj način.
+                        </p>
+
+                        <p>
+                            Vizuelno, serija izgleda kao spoj dječijeg CGI crtića i noćne more interneta. Animacija je namjerno prenaglašena, puna 
+                            jarkih boja, deformisanih izraza lica i umjetne energije koja s vremenom postaje sve više uznemirujuća. Upravo zato finalna 
+                            epizoda koja dolazi u kina djeluje kao veliki trenutak za indie animaciju - rijetko koja web-serija uspije izgraditi ovako 
+                            ogromnu publiku i emocionalnu povezanost sa fanovima.
+                        </p>
+                        <h1>Ocjena: 4.8/5</h1>
+
+                </article>
+
+            </section>
+
+   
+        </main>
+
+        <aside class="desni-sidebar">
+            <h3 class="trailer-naslov">Trailer sedmice</h3>
+            <div class="video-okvir">
+                
+                <a href="https://www.youtube.com/watch?v=3zOLzsbOleM" target="_blank">
+                    
+                    <video autoplay muted loop playsinline poster="images/video-placeholder.jpg" class="lokalni-video">
+                        <source src="images/tvoj-video.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+            <p class="trailer-opis">Najnoviji trailer za hit godine.</p>
+        </aside>
+
+    </div>
+
+    <footer class="footer-glavni">
+        <p>&copy; 2026 CineGuide. Sva prava zadržana.</p>
+        <p class="footer-autori">Autori: Zara Bulić, Amir Kešetović, Amir Kavazović</p>
+        <a href="https://www.x.com" target="_blank"><img src="images/x-icon.png" alt="X Logo" class="icon"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/Instagram_icon.png" alt="Instagram Logo" class="icon"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="images/Youtube_icon.png" alt="Youtube Logo" class="icon"></a>
+    </footer>
+
+</body>
+</html>
+
+</html>

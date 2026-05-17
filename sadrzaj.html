@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineGuide - Sadržaj</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+    <script src="js/tptpskripte.js" defer></script>
+</head>
+<body id="vrh">
+<header>
+ <div class="logo">
+ <img src="images/CineLogoFinal.png" alt="CineGuide Logo" class="logo-slika">
+ </div>
+
+ <nav>
+      <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="sadrzaj.html">Sadržaj</a></li>
+          <li><a href="https://github.com/amirkesetovic/Grupa14-TPTP-2026" target="_blank">GitHub</a></li>
+          <li><a href="#" id="accessibility">Pristupačnost</a></li>
+        </ul>
+    </nav>
+
+    <!-- ACCESSIBILITY PANEL -->
+<div class="accessibility-panel hidden" id="accessibility-panel">
+
+    <h3>Postavke pristupačnosti</h3>
+
+    <div class="accessibility-option">
+        <label for="font-size-slider">
+            Veličina fonta
+        </label>
+
+        <input
+            type="range"
+            id="font-size-slider"
+            min="14"
+            max="24"
+            value="16"
+        >
+
+        <span id="font-size-value">16px</span>
+    </div>
+
+
+    <div class="accessibility-option">
+        <button id="toggle-animations">
+            Isključi animacije
+        </button>
+    </div>
+
+</div>
+</header>
+
+<div class="glavni-kontejner">
+<aside class="lijevi-sidebar">
+<input type="checkbox" id="mode-toggle" class="mode-checkbox">
+<label for="mode-toggle" class="slide-kontejner">
+<div class="ikona-omotac">
+<img src="images/lightmode.png" alt="Light mode" class="ikona-sunce">
+<img src="images/darkmode.png" alt="Dark mode" class="ikona-mesec">
+</div>
+</label>
+
+<h3>Brza navigacija</h3>
+
+        <ul>
+            <li><a href="#film-info">Film informacije</a></li>
+            <li><a href="#tabela">Tabela filmova</a></li>
+            <li><a href="#galerija">Galerija</a></li>
+            <li><a href="#mapa">Mapa kina</a></li>
+            <li><a href="#liste">Žanrovi</a></li>
+        </ul>
+
+    </aside>
+
+   
+  <main class="kontakt-sadrzaj">     
+        <section id="film-info" class="kontakt-sekcija">
+            <h1>Detaljni filmski sadržaj</h1>
+            <p>
+                CineGuide vam donosi detaljne informacije o najpopularnijim
+                filmovima godine. Na ovoj stranici možete pronaći galeriju,
+                tabelarni prikaz filmova, interaktivnu mapu i organizovane
+                filmske kategorije.
+            </p>
+            <p>
+                Naš cilj je pomoći ljubiteljima filma da lakše pronađu sadržaj
+                koji odgovara njihovom ukusu.
+            </p>
+        </section>
+
+        
+         <section id="tabela" class="kontakt-sekcija">
+           <h2>Top filmovi godine</h2>
+            <table class="film-tabela">
+                <thead>
+                    <tr>
+                        <th>Naziv filma</th>
+                        <th>Žanr</th>
+                        <th>Ocjena</th>
+                        <th>Trajanje</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Top Gun+Top Gun:Maverick</td>
+                        <td>Akcija</td>
+                        <td>4.8/5</td>
+                        <td>1h 50min + 2h 11min</td>
+                    </tr>
+
+                    <tr>
+                        <td>The Devil Wears Prada 2</td>
+                        <td>Komedija</td>
+                        <td>3.2/5</td>
+                        <td>1h 59min</td>
+                    </tr>
+
+                    <tr>
+                        <td>Michael</td>
+                        <td>Drama</td>
+                        <td>5.0/5</td>
+                        <td>2h 7min</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hokum</td>
+                        <td>Horor</td>
+                        <td>4.0/5</td>
+                        <td>1h 47min</td>
+                    </tr>
+
+                    <tr>
+                        <td>The Mandalorian and Grogu</td>
+                        <td>Sci-Fi</td>
+                        <td>4.7/5</td>
+                        <td>2h 12min</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+<section id="galerija" class="kontakt-sekcija">
+
+    <h2>Galerija filmova</h2>
+
+    <div class="galerija-filmova">
+
+        <a href="https://www.imdb.com/title/tt1745960/" target="_blank">
+            <img src="images/TG_poster.jpeg" alt="akcijski scena">
+        </a>
+
+        <a href="https://www.imdb.com/title/tt33612209/" target="_blank">
+            <img src="images/devil_galerija.jpg" alt="komedija scena">
+        </a>
+        <a href="https://www.imdb.com/title/tt27681354/" target="_blank">
+            <img src="images/grey_galerija.jpg" alt="triler scena">
+        </a>
+
+        <a href="https://www.imdb.com/title/tt11378946/" target="_blank">
+            <img src="images/michael.jpg" alt="drama scena">
+        </a>
+
+        <a href="https://www.imdb.com/title/tt37287335/" target="_blank">
+            <img src="images/Opsesija_poster.jpg" alt="horor-scena">
+        </a>
+
+        <a href="https://www.imdb.com/title/tt30825738/" target="_blank">
+            <img src="images/TMAG_poster.jpeg" alt="sci-fi scena">
+        </a>
+
+        <a href="https://www.imdb.com/title/tt33071426/" target="_blank">
+            <img src="images/drama.jpg" alt="romantični film scena">
+        </a>
+        <a href="https://www.imdb.com/title/tt27610198/" target="_blank">
+            <img src="images/digitalcircus.jpeg" alt="sci-fi scena">
+        </a>
+    </div>
+
+</section>
+        
+
+       <section id="mapa" class="kontakt-sekcija">
+
+    <h2>Interaktivna mapa kina</h2>
+
+    <p>
+        Kliknite na dijelove slike da saznate više
+        o sadržaju i ponudi CineStar kina u Tuzli.
+    </p>
+
+    <div class="map-wrapper">
+
+        <img
+            src="images/cinestartuzla.jpg"
+            usemap="#image-map"
+            class="interaktivna-mapa"
+            id="kino-mapa"
+            alt="Mapa CineStar kina"
+        >
+
+        <svg class="map-highlight"></svg>
+
+        <map name="image-map">
+
+            <area
+                target="_blank"
+                alt="Ponuda grickalica"
+                title="Ponuda grickalica"
+                href="https://cinestarcinemas.ba/snacks-drinks-1073"
+                shape="poly"
+
+                data-original="44,294,322,261,323,202,46,162,43,226"
+                coords="44,294,322,261,323,202,46,162,43,226"
+            >
+
+            <area
+                target="_blank"
+                alt="Ponuda Filmova"
+                title="Ponuda Filmova"
+                href="https://cinestarcinemas.ba/tuzla-bingo-city-center"
+                shape="poly"
+
+                data-original="47,68,227,127,223,166,45,131"
+                coords="47,68,227,127,223,166,45,131"
+            >
+
+            <area
+                target="_blank"
+                alt="Klub"
+                title="Klub"
+                href="https://cinestarcinemas.ba/stars-club-1060"
+                shape="poly"
+
+                data-original="389,141,499,119,506,176,392,187"
+                coords="389,141,499,119,506,176,392,187"
+            >
+
+            <area
+                target="_blank"
+                alt="Sjedista"
+                title="Sjedista"
+                href="https://cinestarcinemas.ba/sjedista"
+                shape="poly"
+
+                data-original="372,198,476,191,487,270,371,261"
+                coords="372,198,476,191,487,270,371,261"
+            >
+
+            <area
+                target="_blank"
+                alt="Cinestar"
+                title="Cinestar"
+                href="https://cinestarcinemas.ba"
+                shape="circle"
+
+                data-original="303,172,24"
+                coords="303,172,24"
+            >
+
+        </map>
+
+    </div>
+
+</section>
+
+        <section id="liste" class="kontakt-sekcija">
+            <h2>Filmovi:</h2>
+            <ul>
+                <li>
+                    Akcija
+                    <ul>
+                        <li>Top Gun+Top Gun: Maverick</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    Komedija
+                    <ul>
+                        <li>The Devil Wears Prada 2</li>
+                    </ul>
+                    </li>
+                
+                    <li>
+                    Drama
+                    <ul>
+                        <li>Michael</li>
+                    </ul>
+                </li>
+                <li>
+                    Horor
+                    <ul>
+                        <li>Hokum</li>
+                        <li>Opsesija</li>
+                    </ul>
+                </li>
+                <li>  
+                    Sci-Fi
+                    <ul>
+                        <li>The Mandalorian and Grogu</li>
+                        <li>The Amazing Digital Circus</li>
+                    </ul>
+                </li>
+            <li>  
+                    Romantični
+                    <ul>
+                        <li>The Drama</li>
+                    </ul>
+                </li>
+                <li>  
+                    Triler
+                    <ul>
+                        <li>In The Grey</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+		
+        <section class="kontakt-sekcija">
+
+            <h2>O filmskoj industriji</h2>
+
+            <p>
+                Filmska industrija danas predstavlja jednu od najvećih grana
+                zabavne industrije u svijetu. Savremeni filmovi koriste
+                napredne specijalne efekte, CGI tehnologiju i vrhunsku
+                produkciju kako bi publici pružili nezaboravno iskustvo.
+            </p>
+
+            <p>
+                Streaming platforme dodatno su promijenile način na koji
+                publika prati filmski sadržaj. Danas gledatelji mogu
+                pristupiti hiljadama filmova putem interneta.
+            </p>
+
+            <p>
+                CineGuide prati najnovije trendove i omogućava korisnicima
+                da pronađu najbolje filmove prema svojim interesovanjima.
+            </p>
+        </section>
+
+        <section class="kontakt-sekcija">
+            <a href="#vrh" class="detalji-btn">
+                Nazad na vrh
+            </a>
+        </section>
+    </main>
+  
+    <aside class="desni-sidebar">
+
+        <h3>
+            Preporučeni film
+        </h3>
+        <div class="film-sedmice">
+            
+            <h4>Mandalorian i Grogu</h4>
+            <p>
+                Novi film poznate Star Wars franšize koji prati avanture 
+                Mandalorijanca i njegovog malog saputnika Grogu-a.
+            </p> 
+        </div>
+        <blockquote>
+            “This is the Way.”
+        </blockquote>
+        <p class="link-naslov">Više o filmu:</p>
+
+    <div class="link-grupa">
+        <a href="https://www.imdb.com/title/tt30825738/" target="_blank" class="link-dugme">
+            IMDb
+        </a>
+
+        <a href="https://cinestarcinemas.ba/tuzla-bingo-city-center/mandalorian-i-grogu/6325"
+           target="_blank" class="link-dugme">
+            CineStar
+        </a>
+    </aside>
+</div>
+
+<footer>
+        <p>&copy; 2026 CineGuide. Sva prava zadržana.</p>
+        <p>Autori: Zara Bulić, Amir Kešetović, Amir Kavazović</p>
+        <a href="https://www.x.com" target="_blank"><img src="images/x-icon.png" alt="X Logo" class="icon"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/Instagram_icon.png" alt="Instagram Logo" class="icon"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="images/Youtube_icon.png" alt="Youtube Logo" class="icon"></a>
+    </footer>
+
+</body>
+</html>
